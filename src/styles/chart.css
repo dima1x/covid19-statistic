@@ -1,0 +1,17 @@
+.chartTab {
+    .filters {
+        display: flex;
+        padding: 0 0 1vw 0;
+        height: 2vw;
+        align-items: center;
+
+        p {
+            padding: 0 1vw 0 0;
+            font-size: 1.1vw;
+        }
+
+        select {
+            width: 8.5vw;
+        }
+    }
+}

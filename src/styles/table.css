@@ -1,0 +1,214 @@
+.tableTab {
+    .table {
+        width: "max-content";
+
+        table {
+            border-spacing: 0;
+            border: 0.1vw solid black;
+            border-bottom: 0;
+            font-size: 1vw;
+        
+            tbody {
+                tr:nth-child(even) {
+                    td {
+                        background-color: #D9D9D9;
+                    }
+                }
+                tr:nth-child(odd) {
+                    td {
+                        background-color: #EFEFEF;
+                    }
+                }
+            }
+        
+            tr {
+                :last-child {
+                    border-right: 0;
+                }
+            }
+        
+            th,
+            td {
+                border-bottom: 0.1vw solid black;
+                border-right: 0.1vw solid black;
+                width: 8vw;
+                height: 2.2vw;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        
+            th {
+                background-color: #FCE5CD;
+                font-weight: normal;
+                vertical-align: top;
+            }
+        
+            td {
+                padding: 0 0 0 1%;
+            }
+        }
+
+        .empty-table {
+            background-color: white;
+            border: 0.1vw solid black;
+            border-top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            p {
+                font-size: 1.5vw;
+            }
+        }
+    }
+
+    .cursor-pointer {
+        cursor: pointer;
+    }
+
+    .select-none {
+        user-select: none;
+    }
+
+    .filters {
+        height: max-content;
+        width: 100%;
+        padding: 0 0 1vw 0;
+
+        .top {
+            height: 1.8vw;
+            width: 100%;
+            padding: 0 0 1vw 0;
+            display: flex;
+
+            .country {
+                display: flex;
+
+                input {
+                    width: 7.9vw;
+                    padding: 0 0.2vw;
+                }
+
+                button {
+                    width: 2.6vw;
+                    padding: 0;
+                    border: 0.1vw solid black;
+                    border-left: 0;
+                    background-color: #C9DAF8;
+                    text-align: center;
+                    font-size: 1vw;
+                    user-select: none;
+                    pointer-events: none;
+                }
+            }
+
+            .range-filter {
+                height: 100%;
+                width: 100%;
+
+                .range-filter-right {
+                    height: 100%;
+                    float: right;
+                    display: flex;
+                }
+
+                select {
+                    width: 15vw;
+                }
+
+                input {
+                    height: 100%;
+                    width: 7vw;
+                    text-align: center;
+                    padding: 0;
+                    margin: 0 0 0 0.5vw;
+                }
+
+                input::placeholder {
+                    color: black;
+                }
+            }
+        }
+        .bottom {
+            width: 100%;
+
+            button {
+                height: 3vw;
+                width: 12vw;
+                padding: 0;
+                float: right;
+                border: 0.1vw solid black;
+                background-color: #D0E0E3;
+                font-size: 1.1vw;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #C2D7DB;
+            }
+        }
+    }
+
+    .table-bottom {
+        display: flex;
+        padding: 1vw 0 0 0;
+
+        .row-count {
+            select {
+                text-align: center;
+                width: 5vw;
+            }
+        }
+
+        .pages {
+            width: 100%;
+            height: 100%;
+
+            .page-buttons {
+                display: flex;
+                float: right;
+
+                button {
+                    width: 2vw;
+                    height: 2vw;
+                    font-size: 0.9vw;
+                    text-align: center;
+                    padding: 0;
+                    cursor: pointer;
+                    background-color: #D9EAD3;
+                    border: 0.1vw solid black;
+                    border-right: 0;
+                }
+        
+                button.next {
+                    background-color: #FFFFFF;
+                }
+        
+                button.next:hover {
+                    background-color: #F0F0F0;
+                }
+        
+                button.edge {
+                    background-color: #D9D9D9;
+                }
+        
+                button.edge:hover {
+                    background-color: #EDEDED;
+                }
+        
+                button.selected {
+                    pointer-events: none;
+                    background-color: #B0D8A2;
+                }
+        
+                button:hover {
+                    background-color: #BFDEB5;
+                }
+        
+                button:last-child {
+                    border-right: 0.1vw solid black;
+                }
+            }
+        }
+    }
+}

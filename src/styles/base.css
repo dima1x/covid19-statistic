@@ -1,0 +1,85 @@
+body {
+    width: 90vw;
+    margin: auto;
+    padding: 2% 0;
+    font-family: Arial;
+}
+
+input {
+    font-size: 1.1vw;
+    border: 0.1vw solid black;
+    outline: none;
+}
+
+input.error {
+    background-color: rgb(238, 114, 114);
+}
+
+input::placeholder {
+    color: black;
+}
+
+select {
+    height: 100%;
+    padding: 0 1.3vw 0 0.5vw;
+    border: 0.1vw solid black;
+    background-color: #D0E0E3;
+    font-size: 1.1vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5vw top 50%;
+    background-size: 0.8vw auto;
+}
+
+.date {
+    height: 2vw;
+    margin: 1.5vw 0;
+    display: flex;
+    align-items: center;
+
+    p {
+        font-size: 1.1vw;
+    }
+
+    .showAll {
+        height: 100%;
+        width: 13vw;
+        padding: 0;
+        margin: 0 0 0 0.9vw;
+        border: 0.1vw solid black;
+        background-color: #D0E0E3;
+        font-size: 1.1vw;
+        cursor: pointer;
+    }
+
+    .showAll:hover {
+        background-color: #C2D7DB;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.default {
+    margin: 1vw;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix::after {
+    clear: both;
+    display: table;
+    content: "";
+}
