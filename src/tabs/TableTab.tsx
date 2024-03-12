@@ -166,6 +166,10 @@ function TableTab(props: {records: Record[], setRecords: any}) {
                 <option value="allDeathsCount">Количество смертей всего</option>
                 <option value="casesCountPer1000">Количество случаев на 1000 жителей</option>
                 <option value="deathsCountPer1000">Количество смертей на 1000 жителей</option>
+                <option value="averageCasesCountPerDay">Среднее количество заболеваний в день</option>
+                <option value="averageDeathsCountPerDay">Среднее количество смертей в день</option>
+                <option value="maxCasesCount">Максимальное количество заболеваний</option>
+                <option value="maxDeathsCount">Максимальное количество смертей</option>
               </select>
               <input className={Calculator.isNumber(filterValueFrom) ? "" : "error"} value={filterValueFrom} onChange={x => updateFilter({filterValueFromParam: x.target.value})} placeholder='значения от' />
               <input className={Calculator.isNumber(filterValueTo) ? "" : "error"} value={filterValueTo} onChange={x => updateFilter({filterValueToParam: x.target.value})} placeholder='значения до' />
@@ -179,8 +183,6 @@ function TableTab(props: {records: Record[], setRecords: any}) {
 
       <div className="table">
         {(() => {
-          // thead
-
           let thead = [];
           
           thead = table.getHeaderGroups().map((headerGroup) => {
@@ -212,8 +214,7 @@ function TableTab(props: {records: Record[], setRecords: any}) {
               </tr>
             )
           })
-
-          // tbody
+          
           let tbody = [];
           let emptyBody = [
             (
